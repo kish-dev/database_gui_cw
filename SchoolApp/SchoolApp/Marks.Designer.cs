@@ -46,6 +46,10 @@
             this.firstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.secondName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.chooseDisciplineLabel = new System.Windows.Forms.Label();
+            this.chooseDisciplineComboBox = new System.Windows.Forms.ComboBox();
+            this.comboBoxChooseStudent = new System.Windows.Forms.ComboBox();
+            this.chooseStudentLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.marksDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.marksBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quarterMarksDataGridView)).BeginInit();
@@ -54,7 +58,7 @@
             // chooseClassComboBox
             // 
             this.chooseClassComboBox.FormattingEnabled = true;
-            this.chooseClassComboBox.Location = new System.Drawing.Point(361, 70);
+            this.chooseClassComboBox.Location = new System.Drawing.Point(266, 55);
             this.chooseClassComboBox.Name = "chooseClassComboBox";
             this.chooseClassComboBox.Size = new System.Drawing.Size(173, 21);
             this.chooseClassComboBox.TabIndex = 1;
@@ -63,7 +67,7 @@
             // chooseClassLabel
             // 
             this.chooseClassLabel.AutoSize = true;
-            this.chooseClassLabel.Location = new System.Drawing.Point(194, 73);
+            this.chooseClassLabel.Location = new System.Drawing.Point(100, 58);
             this.chooseClassLabel.Name = "chooseClassLabel";
             this.chooseClassLabel.Size = new System.Drawing.Size(90, 13);
             this.chooseClassLabel.TabIndex = 2;
@@ -72,7 +76,7 @@
             // isQuarterMark
             // 
             this.isQuarterMark.AutoSize = true;
-            this.isQuarterMark.Location = new System.Drawing.Point(197, 31);
+            this.isQuarterMark.Location = new System.Drawing.Point(103, 29);
             this.isQuarterMark.Name = "isQuarterMark";
             this.isQuarterMark.Size = new System.Drawing.Size(172, 17);
             this.isQuarterMark.TabIndex = 3;
@@ -82,7 +86,7 @@
             // 
             // choosePeriodEndDateTimePicker
             // 
-            this.choosePeriodEndDateTimePicker.Location = new System.Drawing.Point(365, 126);
+            this.choosePeriodEndDateTimePicker.Location = new System.Drawing.Point(271, 124);
             this.choosePeriodEndDateTimePicker.Name = "choosePeriodEndDateTimePicker";
             this.choosePeriodEndDateTimePicker.Size = new System.Drawing.Size(168, 20);
             this.choosePeriodEndDateTimePicker.TabIndex = 4;
@@ -91,7 +95,7 @@
             // chooseEndPeriodLabel
             // 
             this.chooseEndPeriodLabel.AutoSize = true;
-            this.chooseEndPeriodLabel.Location = new System.Drawing.Point(194, 132);
+            this.chooseEndPeriodLabel.Location = new System.Drawing.Point(100, 130);
             this.chooseEndPeriodLabel.Name = "chooseEndPeriodLabel";
             this.chooseEndPeriodLabel.Size = new System.Drawing.Size(135, 13);
             this.chooseEndPeriodLabel.TabIndex = 5;
@@ -114,7 +118,7 @@
             this.mark,
             this.dateOfMark,
             this.Дисциплина});
-            this.marksDataGridView.Location = new System.Drawing.Point(187, 161);
+            this.marksDataGridView.Location = new System.Drawing.Point(103, 177);
             this.marksDataGridView.Name = "marksDataGridView";
             this.marksDataGridView.Size = new System.Drawing.Size(442, 124);
             this.marksDataGridView.TabIndex = 7;
@@ -143,7 +147,7 @@
             this.firstName,
             this.secondName,
             this.lastName});
-            this.quarterMarksDataGridView.Location = new System.Drawing.Point(187, 161);
+            this.quarterMarksDataGridView.Location = new System.Drawing.Point(103, 177);
             this.quarterMarksDataGridView.Name = "quarterMarksDataGridView";
             this.quarterMarksDataGridView.Size = new System.Drawing.Size(540, 150);
             this.quarterMarksDataGridView.TabIndex = 8;
@@ -173,11 +177,51 @@
             this.lastName.HeaderText = "Фамилия";
             this.lastName.Name = "lastName";
             // 
+            // chooseDisciplineLabel
+            // 
+            this.chooseDisciplineLabel.AutoSize = true;
+            this.chooseDisciplineLabel.Location = new System.Drawing.Point(100, 96);
+            this.chooseDisciplineLabel.Name = "chooseDisciplineLabel";
+            this.chooseDisciplineLabel.Size = new System.Drawing.Size(97, 13);
+            this.chooseDisciplineLabel.TabIndex = 9;
+            this.chooseDisciplineLabel.Text = "Выбрать предмет";
+            // 
+            // chooseDisciplineComboBox
+            // 
+            this.chooseDisciplineComboBox.FormattingEnabled = true;
+            this.chooseDisciplineComboBox.Location = new System.Drawing.Point(266, 88);
+            this.chooseDisciplineComboBox.Name = "chooseDisciplineComboBox";
+            this.chooseDisciplineComboBox.Size = new System.Drawing.Size(171, 21);
+            this.chooseDisciplineComboBox.TabIndex = 10;
+            this.chooseDisciplineComboBox.SelectedIndexChanged += new System.EventHandler(this.chooseDisciplineComboBox_SelectedIndexChanged);
+            // 
+            // comboBoxChooseStudent
+            // 
+            this.comboBoxChooseStudent.FormattingEnabled = true;
+            this.comboBoxChooseStudent.Location = new System.Drawing.Point(581, 96);
+            this.comboBoxChooseStudent.Name = "comboBoxChooseStudent";
+            this.comboBoxChooseStudent.Size = new System.Drawing.Size(151, 21);
+            this.comboBoxChooseStudent.TabIndex = 14;
+            this.comboBoxChooseStudent.SelectedIndexChanged += new System.EventHandler(this.comboBoxChooseStudent_SelectedIndexChanged);
+            // 
+            // chooseStudentLabel
+            // 
+            this.chooseStudentLabel.AutoSize = true;
+            this.chooseStudentLabel.Location = new System.Drawing.Point(466, 99);
+            this.chooseStudentLabel.Name = "chooseStudentLabel";
+            this.chooseStudentLabel.Size = new System.Drawing.Size(94, 13);
+            this.chooseStudentLabel.TabIndex = 13;
+            this.chooseStudentLabel.Text = "Выбрать ученика";
+            // 
             // Marks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.comboBoxChooseStudent);
+            this.Controls.Add(this.chooseStudentLabel);
+            this.Controls.Add(this.chooseDisciplineComboBox);
+            this.Controls.Add(this.chooseDisciplineLabel);
             this.Controls.Add(this.quarterMarksDataGridView);
             this.Controls.Add(this.marksDataGridView);
             this.Controls.Add(this.backButton);
@@ -215,5 +259,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn firstName;
         private System.Windows.Forms.DataGridViewTextBoxColumn secondName;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastName;
+        private System.Windows.Forms.Label chooseDisciplineLabel;
+        private System.Windows.Forms.ComboBox chooseDisciplineComboBox;
+        private System.Windows.Forms.ComboBox comboBoxChooseStudent;
+        private System.Windows.Forms.Label chooseStudentLabel;
     }
 }

@@ -52,7 +52,7 @@ namespace SchoolApp
             if (isStudent_)
             {
                 chooseRoleComboBox.Items.Add(
-                       "Ученик 21"
+                       "Ученик,21"
                        );
                 return;
             }
@@ -174,7 +174,8 @@ namespace SchoolApp
         private void chooseRoleComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             string[] roleString = chooseRoleComboBox.SelectedItem.ToString().Split(',');
-            idRole_ = Int32.Parse(roleString[1]);
+            int lastIndex = roleString.Length - 1;  
+            idRole_ = Int32.Parse(roleString[lastIndex]);
             if(idRole_ == 18 || idRole_ == 20)
             {
                 chooseClassTeacherLabel.Visible = false;
